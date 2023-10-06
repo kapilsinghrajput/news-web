@@ -1,0 +1,263 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.main_box{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+header{
+    height: 4.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    background: #eaf1f6;
+    padding: 20px 0;
+   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.212);
+
+}
+.header_cont{
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img:hover{
+  transform: rotateX(360deg);
+  cursor: pointer;
+
+}
+.logo img{
+  width: 80px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: .7s all linear;
+}
+header .nav_links{
+  display: flex;
+  gap: 20px;
+}
+
+header .nav_links a{
+  transition: all .3s ease-in-out;
+}
+
+header .nav_links a:hover , a.active{
+  color: rgb(211, 77, 124);
+  transform: scale(1.1);
+}
+
+
+
+.search_box .search_inp{
+  border: none;
+  height: 30px;
+  width: 50%;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  outline: none;
+}
+.search_box .s_btn{
+    font-size: 1.2rem;
+    width: 40px;
+    padding: 5px 0;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: #d08317;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+
+}
+
+.humbur_bar{
+  display: none;
+}
+
+
+
+section{
+    margin-top: 5rem;
+}
+.news_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    align-items: start;
+    padding: 10px;
+
+}
+.news_container .card{
+    max-width: 380px;
+    min-height: 420px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ebf6ef;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
+}
+.news_container .card:hover{
+  transform: scale(1.01);
+  box-shadow: 1px 4px 8px #908d89ae;
+}
+.news_container .card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.write{
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.write h3{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.write .description span{
+  background-color: rgb(200, 206, 200);
+  padding: 5px ;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+
+
+
+
+
+.loader {
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-top: 6rem;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #65ea6c transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+
+
+/* responsive */
+
+
+
+@media only screen and (max-width: 600px) {
+
+  header{
+    padding-top: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .header_cont{
+    background: #e6b9b9;
+    height: 3rem;
+    padding: 0 10px;
+
+
+   
+}
+
+.logo img{
+  width: 50px;
+  height: 25px;
+}
+
+.nav_links{
+  position: absolute;
+  top: 3rem;
+  right: -200px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #bee2bf;
+  border-radius: 0 0 0 10px;
+  transition: .4s all ease-in-out;
+}
+.search_box{
+  margin-left: 4rem;
+  display: flex;
+  justify-content: end;
+}
+
+.search_box .search_inp{
+  height: 20px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.search_box .s_btn{
+  font-size :12px;
+  width:fit-content;
+
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+.humbur_bar{
+  display: block;
+}
+.humbur_bar .fa-xmark{
+  display: none;
+}
+
+.main_box{
+  margin-top: 0;
+}
+
+
+}
